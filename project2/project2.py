@@ -56,4 +56,5 @@ if btn_clicked2 == True and tf == 1:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
-
+if tf == 0:
+    gear.markdown("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
