@@ -44,8 +44,7 @@ if btn_clicked1 == True:
     ### 👇확률을 알려드립니다👇
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
-btn_clicked2 = st.button("Next")
-if btn_clicked2 == True:
+
     probabilities = []
     for col_val in range(col, 150, -1):
         tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
