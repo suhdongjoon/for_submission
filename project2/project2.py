@@ -13,7 +13,7 @@ hd = st.sidebar.selectbox('심장병', ['심장병 있음', '심장병 없음'])
 heart_disease = True if hd == '심장병 있음' else False
 bp = st.sidebar.slider('안정혈압', 90, 200)
 col = st.sidebar.slider('콜레스테롤', 120, 564)
-hb = st.sidebar.slider('최대심박수', 70, 202, None)
+hb = st.sidebar.slider('최대심박수', 70, 202)
 gear = st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=800></a>', unsafe_allow_html=True)
 btn_clicked1 = st.sidebar.button("Confirm")
 jobs = load("project2/xgb_model.joblib")    
@@ -54,6 +54,8 @@ if btn_clicked2 == True and tf == 1:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
+    btn_clicked2 = None
 
 if btn_clicked2 == True and tf == 0:
     gear.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    btn_clicked2 = None
