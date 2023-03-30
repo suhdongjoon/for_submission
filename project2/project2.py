@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from joblib import load
 import xgboost
 
-st.markdown('<div><a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1000></a></div>', unsafe_allow_html=True)
+st.markdown('<div><a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=800></a></div>', unsafe_allow_html=True)
 
 
 st.sidebar.header('Menu')
