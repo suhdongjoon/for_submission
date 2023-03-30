@@ -28,8 +28,7 @@ if btn_clicked1 == True:
 
 
     if tf == 1 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
-    elif tf == 0 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
-    else : pass
+    if tf == 0 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
         
     st.write(f"""
         ## 👇분석 결과👇
