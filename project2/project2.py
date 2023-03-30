@@ -12,12 +12,12 @@ st.sidebar.header('Menu')
 age = st.sidebar.slider('나이', 0, 100)
 
 options = ['남자', '여자']
-sex = st.sidebar.checkbox('성별', options)
+sex = st.sidebar.selectbox('성별', options)
 
 
 
 options2 = ['심장병 있음', '심장병 없음']
-hd = st.sidebar.checkbox('심장병', options2)
+hd = st.sidebar.selectbox('심장병', options2)
 
 
 
