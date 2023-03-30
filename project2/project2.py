@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from joblib import load
 import xgboost
-from streamlit.cache import clear_cache
 
 if btn_clicked1 == True:
     jobs = load("project2/xgb_model.joblib")
@@ -34,7 +33,6 @@ if btn_clicked1 == True:
     """)    
     btn_clicked2 = st.button("Next")
     if btn_clicked2 == True:
-        clear_cache()
         probabilities = []
         for col_val in range(col, 150, -1):
             tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
@@ -49,9 +47,6 @@ if btn_clicked1 == True:
         ax.set_ylabel("Probability of Heart Disease")
         ax.set_title("Probability of Heart Disease by Cholesterol Level")
         st.pyplot(fig)
-
-
-
 
 
 else:
