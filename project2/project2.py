@@ -23,6 +23,8 @@ jobs = load("project2/xgb_model.joblib")
 prob = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
 st.write(prob)
 
+probabilities = []
+
 for col_val in range(col, 150, -1):
     probabilities.append(prob)
     if prob < 0.5:
