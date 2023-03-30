@@ -29,10 +29,10 @@ probabilities = []
 for col_val in range(col, 150, -1):
     prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
     probabilities.append(prob)
+    st.write(probabilities[col_val])
     if prob < 0.5:
         break
-        
-st.write(probabilities)
+
 
 fig, ax = plt.subplots()
 ax.plot(range(col, col-len(probabilities), -1), probabilities)
