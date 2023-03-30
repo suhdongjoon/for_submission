@@ -48,7 +48,7 @@ if btn_clicked1 == True:
     """)
 btn_clicked2 = st.button("Next")
 
-if btn_clicked2 == True and tf=1:
+if btn_clicked2 == True and tf == 1:
     jobs = load("project2/xgb_model.joblib")    
     probabilities = []
     for col_val in range(col, 150, -1):
