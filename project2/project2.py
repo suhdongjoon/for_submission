@@ -8,6 +8,7 @@ import xgboost
 st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
 st.markdown("---")
 
+
 st.sidebar.header('Menu')
 age = st.sidebar.slider('나이', 0, 100)
 sex = st.sidebar.selectbox('성별', ['남자', '여자'])
