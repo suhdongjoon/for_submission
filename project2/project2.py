@@ -15,8 +15,7 @@ heart_disease = True if hd == '심장병 있음' else False
 bp = st.sidebar.slider('안정혈압', 90, 200)
 col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202, None)
-btn_clicked = st.button("Confirm")
-st.write(btn_clicked)
+btn_clicked = st.sidebar.button("Confirm")
 
 if btn_clicked == True:
     jobs = load("project2/xgb_model.joblib")
