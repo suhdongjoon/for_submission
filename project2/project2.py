@@ -16,7 +16,6 @@ col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202, None)
 gear = st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=800></a>', unsafe_allow_html=True)
 btn_clicked1 = st.sidebar.button("Confirm")
-btn_clicked2 = st.button("Next")
 jobs = load("project2/xgb_model.joblib")    
 tf = jobs.predict([[age,gender,heart_disease,bp,col,hb]])
 tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
@@ -42,18 +41,19 @@ if btn_clicked1 == True:
     ### 👇확률을 알려드립니다👇
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
-    if btn_clicked2 == True and tf == 1:
-        probabilities = []
-        for col_val in range(col, 150, -1):
-            prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
-            probabilities.append(prob)
-            if prob < 0.5:
-                break
-        fig, ax = plt.subplots()
-        ax.plot(range(col, col-len(probabilities), -1), probabilities)
-        ax.set_xlabel("Cholesterol")
-        ax.set_ylabel("Probability of Heart Disease")
-        ax.set_title("Probability of Heart Disease by Cholesterol Level")
-        st.pyplot(fig)
-        gear.empty()
-    
+    btn_clicked2 = st.button("Next")
+if btn_clicked2 == True and tf == 1:
+    probabilities = []
+    for col_val in range(col, 150, -1):
+        prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
+        probabilities.append(prob)
+        if prob < 0.5:
+            break
+    fig, ax = plt.subplots()
+    ax.plot(range(col, col-len(probabilities), -1), probabilities)
+    ax.set_xlabel("Cholesterol")
+    ax.set_ylabel("Probability of Heart Disease")
+    ax.set_title("Probability of Heart Disease by Cholesterol Level")
+    st.pyplot(fig)
+    gear.empty()
+
