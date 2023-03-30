@@ -57,4 +57,4 @@ if btn_clicked2 == True and tf == 1:
     st.pyplot(fig)
     gear.empty()
 if tf == 0:
-    gear.markdown("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    gear.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
