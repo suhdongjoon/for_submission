@@ -30,14 +30,12 @@ if btn_clicked == True:
         if tf == 1 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
         elif tf == 0 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
         else : pass
-        gender = "남자" if gender == 1 else "여자"
-        heart_disease = "有" if heart_disease == 1 else "無"
         
         st.write(f"""
             ## 👇분석 결과👇
-            ### 👉 성별 : {gender}
+            ### 👉 성별 : {sex}
             ### 👉 나이 : {age}세
-            ### 👉 심장병(有, 無) : {heart_disease}
+            ### 👉 심장병(有, 無) : {hd}
             ### 👉 혈압 : {bp}mmHg
             ### 👉 콜레스트롤 : {col}TC
             ### 👉 심박수 : {hb}bpm
@@ -45,7 +43,6 @@ if btn_clicked == True:
     
     with col2 : 
         probabilities = []
-        jobs = load("project2/xgb_model.joblib")
         for col_val in range(col, 150, -1):
             tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
             probabilities.append(tf_p)
