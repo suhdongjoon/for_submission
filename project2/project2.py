@@ -16,7 +16,7 @@ col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202)
 
 import os
-os.getcwd()
+st.write(os.getcwd())
 
 
 
