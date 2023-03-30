@@ -46,6 +46,7 @@ if btn_clicked1 == True:
     """)
 btn_clicked2 = st.button("Next")
 if btn_clicked2 == True:
+    jobs = load("project2/xgb_model.joblib")    
     probabilities = []
     for col_val in range(col, 150, -1):
         tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
