@@ -41,9 +41,9 @@ if btn_clicked1 == True:
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
 btn_clicked2 = st.button("Next")
+st.markdown("#")
 
 if btn_clicked2 == True and tf == 1:
-    st.markdown("#")
     probabilities = []
     for col_val in range(col, 150, -1):
         prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
