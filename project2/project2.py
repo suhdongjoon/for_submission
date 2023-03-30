@@ -20,7 +20,6 @@ jobs = load("project2/xgb_model.joblib")
 tf = jobs.predict([[age,gender,heart_disease,bp,col,hb]])
 tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
 
-
 if btn_clicked1 == True:
     gear.empty()
     st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
@@ -42,6 +41,7 @@ if btn_clicked1 == True:
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
 btn_clicked2 = st.button("Next")
+
 if btn_clicked2 == True and tf == 1:
     probabilities = []
     for col_val in range(col, 150, -1):
@@ -56,5 +56,6 @@ if btn_clicked2 == True and tf == 1:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
+
 if btn_clicked2 == True and tf == 0:
     gear.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
