@@ -61,6 +61,3 @@ if btn_clicked1 == True:
         ax.set_title("Probability of Heart Disease by Cholesterol Level")
         st.pyplot(fig)
     
-
-else:
-    st.markdown('<div><a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=700></a></div>', unsafe_allow_html=True)
