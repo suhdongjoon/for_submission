@@ -19,7 +19,7 @@ jobs = load("project2/xgb_model.joblib")
 prob = jobs.predict_proba([[age,sex,hd,bp,col,hb]])[:, 1]
 st.write(prob)
 
-
+st.write(type(age), type(sex), type(hd))
 
 
 
