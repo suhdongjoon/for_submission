@@ -20,7 +20,7 @@ col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202)
 
 jobs = load("project2/xgb_model.joblib")
-prob = jobs.predict_proba([[age,sex,hd,bp,col,hb]])[:, 1]
+prob = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
 st.write(prob)
 
 
