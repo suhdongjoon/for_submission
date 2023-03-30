@@ -1,3 +1,4 @@
 joblib==1.0.1
 statsmodels
 streamlit>=1.8.1
+xgboost
