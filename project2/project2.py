@@ -16,6 +16,7 @@ bp = st.sidebar.slider('안정혈압', 90, 200)
 col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202, None)
 btn_clicked1 = st.sidebar.button("Confirm")
+btn_clicked2 = None
 
 if btn_clicked1 == True:
     jobs = load("project2/xgb_model.joblib")
