@@ -1,4 +1,9 @@
-joblib
+streamlit
+pandas
+numpy
+
 statsmodels
-streamlit>=1.8.1
+plotly
+matplotlib
+mlxtend
 xgboost
