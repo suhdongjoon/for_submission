@@ -27,6 +27,7 @@ st.write(prob)
 probabilities = []
 
 for col_val in range(col, 150, -1):
+    prob = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
     probabilities.append(prob)
     if prob < 0.5:
         break
