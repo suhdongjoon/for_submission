@@ -44,7 +44,21 @@ if btn_clicked == True:
         """)
     
     with col2 : 
-        pass
+        probabilities = []
+        for col_val in range(col, 150, -1):
+            prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
+            probabilities.append(prob)
+    
+            if prob < 0.5:
+                break
+
+
+        fig, ax = plt.subplots()
+        ax.plot(range(col, col-len(probabilities), -1), probabilities)
+        ax.set_xlabel("Cholesterol")
+        ax.set_ylabel("Probability of Heart Disease")
+        ax.set_title("Probability of Heart Disease by Cholesterol Level")
+        st.pyplot(fig)
         
     st.write(f"""
         ## 결과에 실망하지 마세요😭
@@ -52,21 +66,6 @@ if btn_clicked == True:
         ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)    
 
-    probabilities = []
-    for col_val in range(col, 150, -1):
-        prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
-        probabilities.append(prob)
-    
-        if prob < 0.5:
-            break
-
-
-    fig, ax = plt.subplots()
-    ax.plot(range(col, col-len(probabilities), -1), probabilities)
-    ax.set_xlabel("Cholesterol")
-    ax.set_ylabel("Probability of Heart Disease")
-    ax.set_title("Probability of Heart Disease by Cholesterol Level")
-    st.pyplot(fig)
 
 
 
