@@ -42,6 +42,7 @@ if btn_clicked1 == True:
     """)
 btn_clicked2 = st.button("Next")
 st.markdown("#")
+st.markdown("#")
 
 if btn_clicked2 == True and tf == 1:
     probabilities = []
