@@ -27,21 +27,18 @@ if btn_clicked1 == True:
     if tf == 1 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍♂️입니다.", unsafe_allow_html=True)
     if tf == 0 : st.write("# 분석 결과 😊 <span style='color:blue'>정상</span> 😊입니다.", unsafe_allow_html=True)
     st.write(f"""
-        ## 👇분석 결과👇
-        ### 👉 성별 : {sex}
-        ### 👉 나이 : {age}세
-        ### 👉 심장병(有, 無) : {hd}
-        ### 👉 혈압 : {bp}mmHg
-        ### 👉 콜레스트롤 : {col}TC
-        ### 👉 심박수 : {hb}bpm
-    """)
-    st.write(f"""
+    ## 👇분석 결과👇
+    ### 👉 성별 : {sex}
+    ### 👉 나이 : {age}세
+    ### 👉 심장병(有, 無) : {hd}
+    ### 👉 혈압 : {bp}mmHg
+    ### 👉 콜레스트롤 : {col}TC
+    ### 👉 심박수 : {hb}bpm
     ## 결과에 실망하지 마세요😭
     ### 👇확률을 알려드립니다👇
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
 btn_clicked2 = st.button("Next")
-
 
 if btn_clicked2 == True and tf == 1:
     probabilities = []
