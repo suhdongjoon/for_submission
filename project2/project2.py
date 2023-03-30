@@ -14,4 +14,4 @@ name = st.sidebar.selectbox('성별', [sex])
 
 
 
-name = st.sidebar.selectbox('성별', ['sex', 'hd', 'age', 'bp', 'col', 'hb'])
+#name = st.sidebar.selectbox('성별', ['sex', 'hd', 'age', 'bp', 'col', 'hb'])
