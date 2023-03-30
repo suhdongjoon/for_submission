@@ -30,8 +30,10 @@ for col_val in range(col, 150, -1):
     probabilities.append(prob)
     if prob < 0.5:
         break
-plt.plot(range(col, col-len(probabilities), -1), probabilities)
-plt.xlabel("Cholesterol")
-plt.ylabel("Probability of Heart Disease")
-plt.title("Probability of Heart Disease by Cholesterol Level")
-plt.show()
+
+fig, ax = plt.subplots()
+ax.plot(range(col, col-len(probabilities), -1), probabilities)
+ax.set_xlabel("Cholesterol")
+ax.set_ylabel("Probability of Heart Disease")
+ax.set_title("Probability of Heart Disease by Cholesterol Level")
+st.pyplot(fig)
