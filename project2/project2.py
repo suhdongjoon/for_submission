@@ -20,8 +20,7 @@ btn_clicked = st.sidebar.button("Confirm")
 if btn_clicked == True:
     jobs = load("project2/xgb_model.joblib")
     prob = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
-    st.write(prob.values)
-    st.write(type(prob))
+    st.write(prob[0])
 
     probabilities = []
     for col_val in range(col, 150, -1):
