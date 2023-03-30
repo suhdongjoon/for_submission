@@ -47,7 +47,8 @@ if btn_clicked1 == True:
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
 btn_clicked2 = st.button("Next")
-if btn_clicked2 == True:
+
+if btn_clicked2 == True and tf=1:
     jobs = load("project2/xgb_model.joblib")    
     probabilities = []
     for col_val in range(col, 150, -1):
@@ -64,4 +65,3 @@ if btn_clicked2 == True:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
-    
