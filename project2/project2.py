@@ -20,7 +20,7 @@ st.markdown('<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd
 btn_clicked1 = st.sidebar.button("Confirm")
 
 if btn_clicked1 == True:
-    st.markdown("")
+    st.empty()
     jobs = load("project2/xgb_model.joblib")
     tf = jobs.predict([[age,gender,heart_disease,bp,col,hb]])
     tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col,hb]])[:, 1]
