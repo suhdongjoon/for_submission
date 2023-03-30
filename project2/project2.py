@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from joblib import load
 import xgboost
+btn_clicked1 = st.button("Next")
+
 
 if btn_clicked1 == True:
     jobs = load("project2/xgb_model.joblib")
