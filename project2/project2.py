@@ -44,7 +44,6 @@ if btn_clicked1 == True:
     ### 👇확률을 알려드립니다👇
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)    
-    break
 
 else:
     st.markdown('<div><a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=700></a></div>', unsafe_allow_html=True)
