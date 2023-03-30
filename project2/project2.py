@@ -10,18 +10,10 @@ st.markdown("---")
 
 st.sidebar.header('Menu')
 age = st.sidebar.slider('나이', 0, 100)
-
-options = ['남자', '여자']
-sex = st.sidebar.selectbox('성별', options)
-
-
-
-options2 = ['심장병 있음', '심장병 없음']
-hd = st.sidebar.selectbox('심장병', options2)
-
-
-
-
+sex = st.sidebar.selectbox('성별', ['남자', '여자'])
+gender = True if sex == '남자' else False
+hd = st.sidebar.selectbox('심장병', ['심장병 있음', '심자병 없음'])
+heart_disease = True if hd == '심장병 있음' else False
 bp = st.sidebar.slider('안정혈압', 90, 200)
 col = st.sidebar.slider('콜레스테롤', 120, 564)
 hb = st.sidebar.slider('최대심박수', 70, 202)
