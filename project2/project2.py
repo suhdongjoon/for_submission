@@ -15,15 +15,17 @@ options = ['남자', '여자']
 sex = st.sidebar.multiselect('성별', options)
 
 if '남자' in sex:
-    male = True
+    sex = True
 else:
-    male = False
+    sex = False
 
-hd = st.sidebar.checkbox('심장병 있음', True, key='hd')
-if hd:
-    heart_disease = True
+options2 = ['심장병 있음', '심장병 없음']
+hd = st.sidebar.multiselect('심장병', options2)
+
+if '심장병 있음' in options2:
+    hd = True
 else:
-    heart_disease = False
+    hd = False
 
 
 bp = st.sidebar.slider('안정혈압', 90, 200)
