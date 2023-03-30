@@ -37,3 +37,4 @@ ax.set_xlabel("Cholesterol")
 ax.set_ylabel("Probability of Heart Disease")
 ax.set_title("Probability of Heart Disease by Cholesterol Level")
 st.pyplot(fig)
+
