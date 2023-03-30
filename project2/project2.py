@@ -46,6 +46,7 @@ if btn_clicked1 == True:
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)    
     btn_clicked2 = st.button("Next")
+    print(int(btn_clicked1),int(btn_clicked2))
 
 elif btn_clicked2 == True:
     probabilities = []
