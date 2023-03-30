@@ -4,8 +4,6 @@ import pandas as pd
 from joblib import load
 import xgboost
 
-img_url = '<a href="https://sparkly-prince-933.notion.site/1ccb865a95e54590bfd61e22b45520fa"><img src="https://i.imgur.com/ktulthH.gif" width=1200></a>'
-st.markdown(img_url, unsafe_allow_html=True)
 st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
 st.markdown("---")
 
