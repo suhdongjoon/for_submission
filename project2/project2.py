@@ -46,10 +46,10 @@ if btn_clicked == True:
     with col2 : 
         probabilities = []
         for col_val in range(col, 150, -1):
-            prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
-            probabilities.append(prob)
+            tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
+            probabilities.append(tf_p)
     
-            if prob < 0.5:
+            if tf_p < 0.5:
                 break
 
 
