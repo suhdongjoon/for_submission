@@ -4,6 +4,7 @@ import pandas as pd
 from joblib import load
 import xgboost
 
+
 st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
 st.markdown("---")
 
