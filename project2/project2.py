@@ -41,8 +41,7 @@ if btn_clicked1 == True:
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
 btn_clicked2 = st.button("Next")
-st.markdown("#")
-st.markdown("#")
+
 
 if btn_clicked2 == True and tf == 1:
     probabilities = []
