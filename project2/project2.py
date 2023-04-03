@@ -55,9 +55,8 @@ if btn_clicked2 == True and tf == 1:
     st.pyplot(fig)
     gear.empty()
     btn_clicked2 = False
-    while btn_clicked2 == False:
-        if btn_clicked2 == True:
-            st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    if btn_clicked2 == True:
+        st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
 
 
 if btn_clicked2 == True and tf == 0:
