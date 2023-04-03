@@ -53,12 +53,12 @@ if btn_clicked2 == True and tf == 1:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
-    btn_clicked2 = st.button("Done")
-    st.write(btn_clicked2)
-st.write(btn_clicked2)
-if btn_clicked2 == True:
-    gear.empty()
-    st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    btn_clicked3 = st.button("Done")
+while btn_clicked3 == True:
+    btn_clicked2 = None
+    break
+gear.empty()
+st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
 if btn_clicked2 == True and tf == 0:
     gear.empty()
     st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
