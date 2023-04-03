@@ -43,7 +43,7 @@ btn_clicked2 = st.button("Next")
 if btn_clicked2 == True and tf == 1:
     probabilities = []
     for col_val in range(col, 150, -1):
-        prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
+        tf_p = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
         probabilities.append(prob)
         if prob < 0.5:
             break
