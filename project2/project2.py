@@ -38,7 +38,7 @@ if btn_clicked1 == True:
     ### 👇확률을 알려드립니다👇
     ### 👉 {', '.join([f'{p*100:.4f}%' for p in tf_p])}
     """)
-btn_clicked2 = st.button("Next")
+    btn_clicked2 = st.button("Next")
 
 if btn_clicked2 == True and tf == 1:
     probabilities = []
@@ -54,11 +54,9 @@ if btn_clicked2 == True and tf == 1:
     ax.set_title("Probability of Heart Disease by Cholesterol Level")
     st.pyplot(fig)
     gear.empty()
-    btn_clicked2 = False
-    if btn_clicked2 == True:
-        st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
-
+    btn_clicked2 = None
 
 if btn_clicked2 == True and tf == 0:
     gear.empty()
     st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    btn_clicked2 = None
