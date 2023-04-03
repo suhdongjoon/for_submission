@@ -54,7 +54,7 @@ if btn_clicked2 == True and tf == 1:
     st.pyplot(fig)
     gear.empty()
     btn_clicked2 = False
-btn_clicked2 = None
+btn_clicked2.empty()
 btn_clicked3 = st.button("Done")
 if btn_clicked3 == True:
     gear.empty()
