@@ -41,7 +41,7 @@ if btn_clicked1 == True:
 btn_clicked2 = st.button("Next")
 
 if btn_clicked2 == True:
-    if tf == 0:
+    if tf == 1:
         probabilities = []
         for col_val in range(col, 150, -1):
             prob = jobs.predict_proba([[age,gender,heart_disease,bp,col_val,hb]])[:, 1]
