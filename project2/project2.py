@@ -57,8 +57,8 @@ if btn_clicked2 == True and tf == 1:
     btn_clicked2 = False
     while btn_clicked2 == False:
         if btn_clicked2 == True:
-            gear.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+            st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
 
 
 if btn_clicked2 == True and tf == 0:
-    gear.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+    st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
