@@ -56,6 +56,7 @@ if btn_clicked2 == True and tf == 1:
     btn_clicked2 = False
 btn_clicked3 = st.button("Done")
 if btn_clicked3 == True:
+    gear.empty()
     st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
 if btn_clicked2 == True and tf == 0:
     gear.empty()
