@@ -60,3 +60,8 @@ if btn_clicked3 == True:
 if btn_clicked2 == True and tf == 0:
     gear.empty()
     st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
+
+placeholder = st.empty()
+isclick = placeholder.button('delete this button')
+if isclick:
+    placeholder.empty()
