@@ -40,6 +40,14 @@ if btn_clicked1 == True:
     """)
     btn_clicked2 = st.button("Next")
 
+     while btn_clicked2 != True:
+        if btn_clicked1 == True:
+            # 분석 결과를 출력합니다.
+            gear.empty()
+            st.title("🦾입력한 정보로 분석한 결과 입니다🦾")
+            st.markdown("---")
+            if tf == 1 : st.write("# 분석 결과 🤦‍♂️ <span style='color:red'>고혈압</span> 🤦‍
+
     if btn_clicked2 == True and tf == 1:
         probabilities = []
         for col_val in range(col, 150, -1):
