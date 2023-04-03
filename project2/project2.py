@@ -57,5 +57,5 @@ if btn_clicked2 == True and tf == 1:
 
 if btn_clicked2 == True:
     gear.empty()
-    fig.empty()
+    st.empty()
     st.image("https://i.imgur.com/4Xd3Mdn.gif", width = 800)
